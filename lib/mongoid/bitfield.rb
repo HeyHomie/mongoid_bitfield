@@ -35,7 +35,20 @@ module Mongoid
             bit(fieldsymbol => { and: ~bit })
           end
         end
+
+        define_method("#{fieldname}_options") do
+          bits
+        end
+
+      end
+
+    end
+
+    def selected_bits_for(field_name)
+      send("#{field_name}_options").select do |bit|
+        send(bit)
       end
     end
+
   end
 end

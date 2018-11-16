@@ -5,7 +5,7 @@ require "mongoid/bitfield/version"
 Gem::Specification.new do |spec|
   spec.name          = "mongoid_bitfield"
   spec.version       = Mongoid::Bitfield::VERSION
-  spec.authors       = ["Christoph Grabo"]
+  spec.authors       = ["Christoph Grabo", "Chucheen Gutierrez"]
   spec.email         = ["asaaki@mannaz.cc"]
   spec.description   = "Mongoid::Bitfield stores boolean flags as single property in MongoDB."
   spec.summary       = "Mongoid::Bitfield stores boolean flags as single property."
@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "mongoid", "~> 4.0.0"
+  spec.add_dependency "mongoid", "> 5.1.0"
   spec.add_dependency "activesupport", ">= 0"
 
   spec.add_development_dependency "rake"
